@@ -14,7 +14,7 @@
       property="og:description"
       content="Force-aware whole-body compensation for contact-rich loco-manipulation."
     >
-    <meta property="og:image" content="assets/framework.png">
+    <meta property="og:image" content="assets/framework.webp">
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
@@ -23,16 +23,16 @@
         <p class="venue">Project page</p>
         <div class="logo-strip" aria-label="Institutions">
           <a class="logo-card zju-logo" href="https://www.zju.edu.cn/" target="_blank" rel="noopener">
-            <img src="assets/logos/zju.png" alt="Zhejiang University">
+            <img src="assets/logos/zju.webp" alt="Zhejiang University">
           </a>
           <a class="logo-card shlab-logo" href="https://www.shlab.org.cn/" target="_blank" rel="noopener">
-            <img src="assets/logos/shlab-share.png" alt="Shanghai Artificial Intelligence Laboratory">
+            <img src="assets/logos/shlab-share.webp" alt="Shanghai Artificial Intelligence Laboratory">
           </a>
           <a class="logo-card tsinghua-logo" href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">
             <img src="assets/logos/tsinghua.svg" alt="Tsinghua University">
           </a>
           <a class="logo-card zgca-logo" href="https://www.bza.edu.cn/en/about" target="_blank" rel="noopener">
-            <img src="assets/logos/zgca.png" alt="Zhongguancun Academy">
+            <img src="assets/logos/zgca.webp" alt="Zhongguancun Academy">
           </a>
           <a class="logo-card deeprobotics-logo" href="https://www.deeprobotics.us/" target="_blank" rel="noopener">
             <img src="assets/logos/deeprobotics.webp" alt="Deep Robotics">
@@ -112,9 +112,10 @@
             controls
             playsinline
             preload="none"
-            poster="assets/FWBC-poster.jpg"
+            poster="assets/FWBC-poster.webp"
+            data-lazy-video
           >
-            <source src="assets/FWBC-demo.mp4" type="video/mp4">
+            <source data-src="assets/FWBC-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -125,6 +126,7 @@
         <figure class="cover-figure abstract-figure">
           <img
             src="assets/cover-tasks.webp"
+            loading="lazy"
             alt="FWBC-VLA real-world door opening and blackboard cleaning task setup."
           >
           <figcaption>Contact-rich evaluation scenarios covering door opening with a closer, handle pushing, continuous blackboard pressure, and eraser pickup.</figcaption>
@@ -140,7 +142,8 @@
         </div>
         <figure class="motivation-figure">
           <img
-            src="assets/motivation.png"
+            src="assets/motivation.webp"
+            loading="lazy"
             alt="Comparison of kinematic VLA, arm-centric force-aware VLA, and FWBC-VLA paradigms for loco-manipulation."
           >
           <figcaption>Figure 1. FWBC-VLA turns contact from an unobserved consequence of motion into a shared physical signal for both task action and whole-body control.</figcaption>
@@ -162,7 +165,8 @@
         <p class="section-copy">FWBC-VLA builds a sensorless force-aware interface between the VLA policy and whole-body controller. <span class="keep-together">The same interaction representation</span> is shared by two pathways: force-conditioned task action generation and task-relevant body compensation. This keeps the pretrained VLA backbone focused on semantic action decoding while giving the controller physical feedback for sustained contact.</p>
         <figure class="figure-wide">
           <img
-            src="assets/framework.png"
+            src="assets/framework.webp"
+            loading="lazy"
             alt="FWBC-VLA framework connecting sensorless interaction estimation, VLA action generation, and whole-body compensation."
           >
           <figcaption>FWBC-VLA introduces a sensorless force-aware interface between the VLA policy and the whole-body controller.</figcaption>
@@ -203,6 +207,7 @@
         <figure class="dataset-figure">
           <img
             src="assets/dataset.webp"
+            loading="lazy"
             alt="WL&Arm dataset composition and Pico-based teleoperation controls."
           >
           <figcaption>Dataset composition and data collection interface. Force-intent commands are retained as metadata and inspection references, not as deployed policy inputs.</figcaption>
@@ -234,21 +239,24 @@
         <div class="results-grid">
           <figure>
             <img
-              src="assets/realworld-exp.png"
+              src="assets/realworld-exp.webp"
+              loading="lazy"
               alt="Real-world contact-rich loco-manipulation experiments."
             >
             <figcaption>Real-world door-opening and whiteboard-wiping experiments.</figcaption>
           </figure>
           <figure>
             <img
-              src="assets/force-estimate.png"
+              src="assets/force-estimate.webp"
+              loading="lazy"
               alt="Video-aligned contact estimation and force prediction results."
             >
             <figcaption>Video-aligned HSR-Force contact estimation.</figcaption>
           </figure>
           <figure>
             <img
-              src="assets/force-effect.png"
+              src="assets/force-effect.webp"
+              loading="lazy"
               alt="Force-aware compensation effect on contact-rich execution."
             >
             <figcaption>Effect of force-aware feedback and body compensation.</figcaption>

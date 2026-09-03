@@ -71,7 +71,7 @@ img {
   z-index: -2;
   background:
     linear-gradient(180deg, rgba(247, 251, 252, 0.92), rgba(255, 255, 255, 0.98) 68%, rgba(255, 251, 242, 0.98)),
-    url("framework.png") center 36% / cover no-repeat;
+    url("framework.webp") center 36% / cover no-repeat;
 }
 
 .hero::after {
