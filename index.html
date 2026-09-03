@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FWBC-VLA</title>
+    <meta
+      name="description"
+      content="FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation."
+    >
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FWBC-VLA">
+    <meta
+      property="og:description"
+      content="Force-aware whole-body compensation for contact-rich loco-manipulation."
+    >
+    <meta property="og:image" content="assets/framework.png">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="venue">Project page</p>
+        <div class="logo-strip" aria-label="Institutions">
+          <a class="logo-card zju-logo" href="https://www.zju.edu.cn/" target="_blank" rel="noopener">
+            <img src="assets/logos/zju.png" alt="Zhejiang University">
+          </a>
+          <a class="logo-card shlab-logo" href="https://www.shlab.org.cn/" target="_blank" rel="noopener">
+            <img src="assets/logos/shlab-share.png" alt="Shanghai Artificial Intelligence Laboratory">
+          </a>
+          <a class="logo-card tsinghua-logo" href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">
+            <img src="assets/logos/tsinghua.svg" alt="Tsinghua University">
+          </a>
+          <a class="logo-card zgca-logo" href="https://www.bza.edu.cn/en/about" target="_blank" rel="noopener">
+            <img src="assets/logos/zgca.png" alt="Zhongguancun Academy">
+          </a>
+          <a class="logo-card deeprobotics-logo" href="https://www.deeprobotics.us/" target="_blank" rel="noopener">
+            <img src="assets/logos/deeprobotics.webp" alt="Deep Robotics">
+          </a>
+        </div>
+        <h1>
+          FWBC-VLA: Force-Aware<br class="mobile-title-break">
+          Whole-Body Compensation<br class="mobile-title-break">
+          for Contact-Rich Loco-Manipulation
+        </h1>
+        <p class="hero-subtitle">
+          A force-aware VLA framework that connects sensorless contact estimation with whole-body compensation for wheel-legged robots.
+        </p>
+        <div class="hero-highlights" aria-label="Method highlights">
+          <span>Sensorless force estimation</span>
+          <span>Force-conditioned VLA</span>
+          <span>Wholebody Loco-maniluptaion</span>
+        </div>
+
+        <div class="authors" aria-label="Authors">
+          <span>Yutian Zhang<sup>1,*</sup></span>
+          <span>Siyuan Ma<sup>3,*</sup></span>
+          <span>Liwen Yang<sup>1</sup></span>
+          <span>Yang Li<sup>2</sup></span>
+          <span>Ce Hao<sup>4</sup></span>
+          <span>Haozhen Chi<sup>6</sup></span>
+          <span>Dong Wei<sup>5,&dagger;</sup></span>
+          <span>Qiaojun Yu<sup>2,&dagger;</sup></span>
+          <span>Dibo Hou<sup>1,&dagger;</sup></span>
+        </div>
+
+        <div class="affiliations" aria-label="Affiliations">
+          <span><sup>1</sup>Zhejiang University</span>
+          <span><sup>2</sup>Shanghai Artificial Intelligence Laboratory</span>
+          <span><sup>3</sup>Tsinghua University</span>
+          <span><sup>4</sup>Zhongguancun Academy</span>
+          <span><sup>5</sup>Deep Robotics</span>
+          <span><sup>6</sup>Zhejiang University of Science and Technology</span>
+        </div>
+
+        <p class="author-notes">
+          <span><sup>*</sup>Equal contribution</span>
+          <span><sup>&dagger;</sup>Corresponding authors</span>
+        </p>
+
+        <nav class="resource-bar" aria-label="Resources">
+          <span class="resource-button resource-arxiv disabled" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 3h16v18H4zM7 7h10M7 11h10M7 15h6"/></svg>
+            ArXiv coming soon
+          </span>
+          <a class="resource-button resource-video" href="assets/FWBC-demo.mp4" target="_blank" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5h16v13H4z"/><path d="m10 9 5 3-5 3z"/></svg>
+            Video
+          </a>
+          <span class="resource-button resource-code disabled" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .8C5.8.8.8 5.8.8 12c0 5 3.2 9.2 7.7 10.6.6.1.8-.2.8-.6v-2c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.8 2.1 3.1 1.5.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3 0 0 .9-.3 3 1.1.9-.2 1.8-.4 2.8-.4s1.9.1 2.8.4c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.7.1 3 .7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1 .8 2.1V22c0 .4.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.6C23.2 5.8 18.2.8 12 .8Z"/></svg>
+            Code coming soon
+          </span>
+          <span class="resource-button resource-dataset disabled" aria-disabled="true">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5.3 11.2a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM18.7 11.2a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM12 13.2c3.7 0 6.7 1.6 6.7 3.6s-3 3.6-6.7 3.6-6.7-1.6-6.7-3.6 3-3.6 6.7-3.6Z"/><path d="M8.4 13.7c-.7-.8-1.1-1.8-1.1-2.9 0-2.6 2.1-4.8 4.7-4.8s4.7 2.2 4.7 4.8c0 1.1-.4 2.1-1.1 2.9"/></svg>
+            Dataset coming soon
+          </span>
+          <a class="resource-button resource-bibtex" href="#bibtex">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 11h6M9 15h6"/></svg>
+            BibTeX
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section demo-section" aria-labelledby="demo-title">
+        <h2 id="demo-title">Demo</h2>
+        <div class="demo-frame demo-frame-video">
+          <video
+            class="demo-video"
+            controls
+            playsinline
+            preload="none"
+            poster="assets/FWBC-poster.jpg"
+          >
+            <source src="assets/FWBC-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <section class="section narrow abstract-section" aria-labelledby="abstract-title">
+        <h2 id="abstract-title">Abstract</h2>
+        <figure class="cover-figure abstract-figure">
+          <img
+            src="assets/cover-tasks.webp"
+            alt="FWBC-VLA real-world door opening and blackboard cleaning task setup."
+          >
+          <figcaption>Contact-rich evaluation scenarios covering door opening with a closer, handle pushing, continuous blackboard pressure, and eraser pickup.</figcaption>
+        </figure>
+        <p>Contact-rich loco-manipulation requires a bridge that connects semantic action generation and physical interaction regulation. Existing VLA models generate task-level actions from visual and linguistic observations, but lack interpretation of how generated actions interact with the physical world. While the whole-body control policy can stabilize the robot, it is unable to distinguish between forces originating from task-relevant contacts and those caused by external disturbances during manipulation.</p>
+        <p>We propose FWBC-VLA, a force-aware loco-manipulation VLA framework for wheel-legged robots that bridges task-level action generation and compensation for WBC. HSR-Force estimates contact intensity and temporal contact trends without dedicated force/torque sensors. These estimates are encoded as force tokens for action decoding and are also used by a compensation generator to produce corrective whole-body actions. Real-world experiments on whiteboard wiping and door opening with a door closer demonstrate the effectiveness of FWBC-VLA in contact-rich loco-manipulation.</p>
+      </section>
+
+      <section class="section motivation-section" aria-labelledby="motivation-title">
+        <div class="motivation-heading">
+          <h2 id="motivation-title">Motivation</h2>
+          <p class="motivation-subtitle">Contact Perception Is Missing State in Whole-Body Control</p>
+        </div>
+        <figure class="motivation-figure">
+          <img
+            src="assets/motivation.png"
+            alt="Comparison of kinematic VLA, arm-centric force-aware VLA, and FWBC-VLA paradigms for loco-manipulation."
+          >
+          <figcaption>Figure 1. FWBC-VLA turns contact from an unobserved consequence of motion into a shared physical signal for both task action and whole-body control.</figcaption>
+        </figure>
+        <div class="motivation-copy">
+          <p>In contact-rich loco-manipulation, contact is not an auxiliary sensing modality. It is a latent physical state that determines both whether the task is progressing and whether the robot can remain stable while executing it. <span class="keep-together">The same end-effector load</span> that enables wiping or overcomes a door closer also propagates through the arm and perturbs the mobile body.</p>
+          <p>Yet existing whole-body VLA stacks communicate mainly through kinematic commands. <span class="keep-together">The VLA</span> can prescribe where to move without knowing how contact is evolving, while <span class="keep-together">the WBC</span> can reject disturbances without knowing which forces are task-relevant. <span class="keep-together">A robot</span> may therefore follow the intended trajectory and still fail physically by losing contact, applying the wrong load, or drifting at the base.</p>
+          <p><span class="keep-together">The central challenge</span> is not simply to add force as another policy input, but to recover a causal interaction state and make it actionable across the control hierarchy. <span class="keep-together">FWBC-VLA estimates</span> this state without dedicated F/T sensors and uses it to close two coupled feedback loops: one adapts task-level action generation, while the other compensates the body-level consequences of the same contact.</p>
+          <ul class="motivation-points">
+            <li><strong>One interaction, two consequences:</strong> contact drives task progress and body disturbance at the same time.</li>
+            <li><strong>One shared signal, two closed loops:</strong> action adaptation and whole-body compensation remain physically coordinated.</li>
+            <li><strong>A necessary correction under sustained load:</strong> body compensation adds 24.5 percentage points on average, including +52 points for door pushing with a closer and +44 points for board cleaning.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section teaser-section" aria-labelledby="teaser-title">
+        <h2 id="teaser-title">Overview</h2>
+        <p class="section-copy">FWBC-VLA builds a sensorless force-aware interface between the VLA policy and whole-body controller. <span class="keep-together">The same interaction representation</span> is shared by two pathways: force-conditioned task action generation and task-relevant body compensation. This keeps the pretrained VLA backbone focused on semantic action decoding while giving the controller physical feedback for sustained contact.</p>
+        <figure class="figure-wide">
+          <img
+            src="assets/framework.png"
+            alt="FWBC-VLA framework connecting sensorless interaction estimation, VLA action generation, and whole-body compensation."
+          >
+          <figcaption>FWBC-VLA introduces a sensorless force-aware interface between the VLA policy and the whole-body controller.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" aria-labelledby="method-title">
+        <h2 id="method-title">Method</h2>
+        <p class="section-copy">The method has three tightly connected parts. HSR-Force estimates residual interaction from robot proprioception at high rate, the <span class="keep-together">VLA action expert</span> receives short force-token histories, and a <span class="keep-together">compensation generator</span> converts body-frame load cues into bounded base corrections. <span class="keep-together">The downstream WBC</span> still handles balance and low-level tracking.</p>
+        <div class="method-grid">
+          <article class="method-card">
+            <p class="eyebrow">Interaction estimation</p>
+            <h3>HSR-Force</h3>
+            <p>A 200-Hz sensorless estimator predicts <span class="keep-together">free-motion torque</span>, preserves <span class="keep-together">directional residual joint torque</span>, and summarizes contact intensity and temporal trends.</p>
+          </article>
+          <article class="method-card">
+            <p class="eyebrow">Action generation</p>
+            <h3>Force-conditioned VLA</h3>
+            <p>Short histories of interaction estimates are encoded as <span class="keep-together">force tokens</span> and <span class="keep-together">late-fused</span> into the <span class="keep-together">action expert</span> during loco-manipulation action decoding.</p>
+          </article>
+          <article class="method-card">
+            <p class="eyebrow">Whole-body control</p>
+            <h3>Body compensation</h3>
+            <p><span class="keep-together">Projected load proxies</span> and <span class="keep-together">base proprioception</span> feed a <span class="keep-together">compensation sidecar</span> that generates <span class="keep-together">bounded corrective actions</span> for sustained physical contact.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dataset-section" aria-labelledby="dataset-title">
+        <div class="dataset-header">
+          <div>
+            <h2 id="dataset-title">WL&amp;Arm Dataset</h2>
+            <p>WL&amp;Arm captures contact-rich wheel-legged loco-manipulation through Pico-based force-intent teleoperation. <span class="keep-together">It pairs</span> high-rate proprioceptive recordings for contact estimation with low-rate real-robot demonstrations for <span class="keep-together">VLA action learning</span>. <span class="keep-together">The dataset</span> covers bottle pick-and-place, whiteboard wiping, and door opening, with force-intent annotations kept as metadata rather than deployed policy inputs.</p>
+          </div>
+          <span class="dataset-status">Dataset coming soon</span>
+        </div>
+
+        <figure class="dataset-figure">
+          <img
+            src="assets/dataset.webp"
+            alt="WL&Arm dataset composition and Pico-based teleoperation controls."
+          >
+          <figcaption>Dataset composition and data collection interface. Force-intent commands are retained as metadata and inspection references, not as deployed policy inputs.</figcaption>
+        </figure>
+
+        <div class="dataset-grid" aria-label="Dataset highlights">
+          <article>
+            <span>5,000+</span>
+            <p>teleoperation episodes</p>
+          </article>
+          <article>
+            <span>200 Hz</span>
+            <p>joint data for contact estimation</p>
+          </article>
+          <article>
+            <span>15 Hz</span>
+            <p>loco-manipulation demonstrations</p>
+          </article>
+          <article>
+            <span>Force intent</span>
+            <p>Pico-based tangential and normal command metadata</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="results-title">
+        <h2 id="results-title">Results</h2>
+        <p class="section-copy">Experiments evaluate sensorless force estimation, real-world loco-manipulation, and the contribution of force-conditioned compensation. <span class="keep-together">HSR-Force responds</span> near contact onset and remains active during sustained door loading. In whiteboard wiping and door opening, <span class="keep-together">FWBC-VLA improves</span> final-stage success most strongly during contact-intensive execution.</p>
+        <div class="results-grid">
+          <figure>
+            <img
+              src="assets/realworld-exp.png"
+              alt="Real-world contact-rich loco-manipulation experiments."
+            >
+            <figcaption>Real-world door-opening and whiteboard-wiping experiments.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/force-estimate.png"
+              alt="Video-aligned contact estimation and force prediction results."
+            >
+            <figcaption>Video-aligned HSR-Force contact estimation.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/force-effect.png"
+              alt="Force-aware compensation effect on contact-rich execution."
+            >
+            <figcaption>Effect of force-aware feedback and body compensation.</figcaption>
+          </figure>
+        </div>
+
+      </section>
+
+      <section class="section narrow bibtex-section" id="bibtex" aria-labelledby="bibtex-title">
+        <h2 id="bibtex-title">BibTeX</h2>
+        <div class="bibtex-toolbar">
+          <button type="button" id="copy-bibtex">Copy BibTeX</button>
+          <span id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <pre><code id="bibtex-code">@misc{zhang2026fwbcvla,
+  title        = {FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation},
+  author       = {Zhang, Yutian and Ma, Siyuan and Yang, Liwen and Li, Yang and Hao, Ce and Chi, Haozhen and Wei, Dong and Yu, Qiaojun and Hou, Dibo},
+  year         = {2026},
+  note         = {Project page. Publication metadata to be updated.}
+}</code></pre>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Project links will be added when available.</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
