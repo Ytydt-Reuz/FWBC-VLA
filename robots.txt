@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ytydt-reuz.github.io/FWBC-VLA/sitemap.xml

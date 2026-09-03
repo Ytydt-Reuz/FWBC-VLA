@@ -2,6 +2,7 @@ import json
 import re
 import subprocess
 import unittest
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -129,6 +130,53 @@ class SitePublishingTest(unittest.TestCase):
             asset = ROOT / "assets" / source
             self.assertTrue(asset.is_file(), source)
             self.assertTrue(source.endswith((".webp", ".svg")), source)
+
+    def test_search_metadata_uses_canonical_absolute_urls(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        canonical = "https://ytydt-reuz.github.io/FWBC-VLA/"
+
+        self.assertIn(
+            "<title>FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation</title>",
+            html,
+        )
+        self.assertIn(f'<link rel="canonical" href="{canonical}">', html)
+        self.assertIn(f'<meta property="og:url" content="{canonical}">', html)
+        self.assertIn(
+            '<meta property="og:image" content="https://ytydt-reuz.github.io/FWBC-VLA/assets/FWBC-poster.webp">',
+            html,
+        )
+        self.assertIn('<meta name="robots" content="index, follow, max-image-preview:large">', html)
+
+    def test_scholarly_article_metadata_matches_visible_page(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        match = re.search(
+            r'<script type="application/ld\+json">\s*(.*?)\s*</script>',
+            html,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(match)
+        metadata = json.loads(match.group(1))
+
+        article = metadata["mainEntity"]
+        self.assertEqual(metadata["@type"], "WebPage")
+        self.assertEqual(article["@type"], "ScholarlyArticle")
+        self.assertEqual(article["headline"], "FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation")
+        self.assertEqual(len(article["author"]), 9)
+        self.assertNotIn("sameAs", article)
+
+    def test_sitemap_and_indexnow_ownership_files_are_valid(self):
+        sitemap = ET.parse(ROOT / "sitemap.xml")
+        namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+        location = sitemap.findtext("s:url/s:loc", namespaces=namespace)
+        self.assertEqual(location, "https://ytydt-reuz.github.io/FWBC-VLA/")
+
+        key_files = [
+            path
+            for path in ROOT.glob("*.txt")
+            if re.fullmatch(r"[0-9a-f]{32}\.txt", path.name)
+        ]
+        self.assertEqual(len(key_files), 1)
+        self.assertEqual(key_files[0].read_text(encoding="utf-8").strip(), key_files[0].stem)
 
 
 if __name__ == "__main__":
