@@ -111,7 +111,10 @@ class SitePublishingTest(unittest.TestCase):
         self.assertNotIn("disabled", video.get("class", "").split())
         self.assertNotIn("aria-disabled", video)
 
-        for label in ("ArXiv coming soon", "Code coming soon", "Dataset coming soon"):
+        self.assertIn("arXiv", resources)
+        self.assertEqual(resources["arXiv"].get("href"), "https://arxiv.org/abs/2609.03889")
+
+        for label in ("Code coming soon", "Dataset coming soon"):
             entry = resources[label]
             self.assertIn("disabled", entry.get("class", "").split())
             self.assertEqual(entry.get("aria-disabled"), "true")
@@ -162,7 +165,7 @@ class SitePublishingTest(unittest.TestCase):
         self.assertEqual(article["@type"], "ScholarlyArticle")
         self.assertEqual(article["headline"], "FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation")
         self.assertEqual(len(article["author"]), 9)
-        self.assertNotIn("sameAs", article)
+        self.assertEqual(article["sameAs"], "https://arxiv.org/abs/2609.03889")
 
     def test_sitemap_and_indexnow_ownership_files_are_valid(self):
         sitemap = ET.parse(ROOT / "sitemap.xml")
